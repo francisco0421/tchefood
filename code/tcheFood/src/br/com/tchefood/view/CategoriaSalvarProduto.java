@@ -1,8 +1,12 @@
 package br.com.tchefood.view;
 
+import br.com.tchefood.DAO.CategoriaDAO;
+import br.com.tchefood.model.CategoriaModel;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class CategoriaSalvarProduto {
     private JPanel panel1;
@@ -54,15 +58,29 @@ public class CategoriaSalvarProduto {
 
     private JButton SALVARButton;
     private JLabel JLnomeProduto;
+    private JButton EXCLUIRButton;
+
     public CategoriaSalvarProduto() {
     SALVARButton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
             CategoriaDAO categoriaDAO = new CategoriaDAO();
-            Categ
-
-                    categoriaDAP
+            CategoriaModel categoria = new CategoriaModel();
+            categoria.setDescricao(textField1.getText());
+            try {
+                categoriaDAO.salvar(categoria);
+            } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+            } catch (ClassNotFoundException ex) {
+                throw new RuntimeException(ex);
+            }
         }
     });
-}
+        EXCLUIRButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+    }
 }

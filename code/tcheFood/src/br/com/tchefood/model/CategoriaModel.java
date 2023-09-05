@@ -1,6 +1,6 @@
 package br.com.tchefood.model;
 
-public class Categoria {
+public class CategoriaModel {
     private int id;
 
     public int getId() {
