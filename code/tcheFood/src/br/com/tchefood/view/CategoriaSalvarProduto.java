@@ -68,8 +68,7 @@ public class CategoriaSalvarProduto {
     SALVARButton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("PASSOU AQUI");
-            CategoriaDAO categoriaDAO = new CategoriaDAO();
+             CategoriaDAO categoriaDAO = new CategoriaDAO();
             CategoriaModel categoria = new CategoriaModel();
             categoria.setDescricao(textField1.getText());
             try {
@@ -87,8 +86,9 @@ public class CategoriaSalvarProduto {
                 CategoriaDAO categoriaDAO = new CategoriaDAO();
                 CategoriaModel categoria = new CategoriaModel();
                 ConexaoMysql connection = new ConexaoMysql();
-                categoria.setId(textField2.getInt);
-
+                CategoriaModel categoriaModel;
+                int idUsuario = Integer.parseInt(textField2.getText());
+                categoriaModel = categoriaDAO.
                 Connection conn;
                 try {
                     conn = connection.obterConexao();
