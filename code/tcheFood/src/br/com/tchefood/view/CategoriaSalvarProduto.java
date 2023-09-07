@@ -63,70 +63,55 @@ public class CategoriaSalvarProduto {
     private JLabel JLnomeProduto;
     private JButton EXCLUIRButton;
     private JTextField textField2;
+    private JButton BUSCARButton;
+    private JButton SALVAREDIÇÃOButton;
+    private JLabel IDCasoVocêQueiraLabel;
 
     public CategoriaSalvarProduto() {
-    SALVARButton.addActionListener(new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-             CategoriaDAO categoriaDAO = new CategoriaDAO();
-            CategoriaModel categoria = new CategoriaModel();
-            categoria.setDescricao(textField1.getText());
-            try {
-                categoriaDAO.salvar(categoria);
-            } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-            } catch (ClassNotFoundException ex) {
-                throw new RuntimeException(ex);
-            }
-        }
-    });
-        EXCLUIRButton.addActionListener(new ActionListener() {
+        SALVARButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CategoriaDAO categoriaDAO = new CategoriaDAO();
                 CategoriaModel categoria = new CategoriaModel();
-                ConexaoMysql connection = new ConexaoMysql();
-                CategoriaModel categoriaModel;
-                int idUsuario = Integer.parseInt(textField2.getText());
-                categoriaModel = categoriaDAO.
-                Connection conn;
+                categoria.setDescricao(textField1.getText());
                 try {
-                    conn = connection.obterConexao();
+                    categoriaDAO.salvar(categoria);
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
                 } catch (ClassNotFoundException ex) {
-                    throw new RuntimeException(ex);
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                }
-                PreparedStatement stmt = null;
-                try {
-                    stmt = conn.prepareStatement("DELETE FROM tb_categoria_produto WHERE id = ?");
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                }
-                try {
-                    stmt.setInt(1, categoria.getId());
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                }
-
-                try {
-                    stmt.executeUpdate();
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                }
-                try {
-                    conn.close();
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                }
-                try {
-                    stmt.close();
-                } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
             }
         });
+        EXCLUIRButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int idUsuario;
+                try {
+                    idUsuario = Integer.parseInt(textField2.getText());
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "ID de usuário inválido.");
+                    return;
+                }
+
+                try (Connection conn = new ConexaoMysql().obterConexao();
+                     PreparedStatement stmt = conn.prepareStatement("DELETE FROM tb_categoria_produto WHERE id = ?")) {
+
+                    stmt.setInt(1, idUsuario);
+                    int rowsAffected = stmt.executeUpdate();
+
+                    if (rowsAffected > 0) {
+                        JOptionPane.showMessageDialog(null, "Categoria excluída com sucesso.");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Nenhuma categoria foi excluída.");
+                    }
+                } catch (ClassNotFoundException | SQLException ex) {
+                    ex.printStackTrace(); // Trate a exceção de maneira apropriada, por exemplo, exibindo uma mensagem de erro.
+                }
+            }
+        });
     }
+
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("CategoriaSalvarProduto");
