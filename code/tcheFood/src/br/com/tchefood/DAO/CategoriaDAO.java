@@ -47,7 +47,7 @@ public class CategoriaDAO {
         }
     }
 
-    public ArrayList<Usuario> obterTodosUsuarios() throws SQLException, ClassNotFoundException {
+    public ArrayList<Produto> obterTodosProdutos() throws SQLException, ClassNotFoundException {
         ConexaoMysql conexaoMysql = new ConexaoMysql();
         Connection con = conexaoMysql.obterConexao();
         PreparedStatement stmt = null;
@@ -56,17 +56,21 @@ public class CategoriaDAO {
         stmt = con.prepareStatement("SELECT id, descricao FROM tb_categoria_produto");
         rs = stmt.executeQuery();
 
-        ArrayList<Usuario> usuariosList = new ArrayList<>();
+        ArrayList<Produto> produtosList = new ArrayList<>();
 
         while (rs.next()) {
             int id = rs.getInt("id");
             String descricao = rs.getString("descricao");
-            Usuario usuario = new Usuario(id, descricao);
-            usuariosList.add(usuario);
+            Produto produto = new Produto(id, descricao);
+            produtosList.add(produto);
         }
 
-        // Retorna a lista de usuários
-        return usuariosList;
+        // Retorna a lista de produtos
+        return produtosList;
     }
 
+
+    public void atualizar(CategoriaModel categoria) {
+
+    }
 }

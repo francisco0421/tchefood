@@ -116,6 +116,31 @@ public class CategoriaSalvarProduto {
 
             }
         });
+        SALVAREDIÇÃOButton.addActionListener(new ActionListener() {
+            // Dentro do ActionListener do botão "Salvar Edição"
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CategoriaDAO categoriaDAO = new CategoriaDAO();
+                CategoriaModel categoria = new CategoriaModel();
+
+                // Suponhamos que você tenha o ID do produto que está sendo editado
+                int idProdutoEditado = obterIdProdutoEditado();
+
+                // Defina o ID do produto que está sendo editado
+                categoria.setId(idProdutoEditado);
+
+                // Defina a nova descrição com base nos dados do campo de texto
+                categoria.setDescricao(textField1.getText());
+
+                // Atualize o produto no banco de dados
+                categoriaDAO.atualizar(categoria);
+            }
+
+            private int obterIdProdutoEditado() {
+                return 0;
+            }
+
+        });
     }
 
 

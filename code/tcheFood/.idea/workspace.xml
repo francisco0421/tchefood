@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c30c8942-c680-4bec-8638-115be4c00164" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/br/com/tchefood/DAO/Produto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/DAO/CategoriaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/DAO/CategoriaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/infra/Teste.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +36,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.tchefood.DAO" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.CategoriaSalvarProduto (1)">
     <configuration name="CategoriaSalvarProduto (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.tchefood.view.CategoriaSalvarProduto" />
