@@ -110,6 +110,12 @@ public class CategoriaSalvarProduto {
                 }
             }
         });
+        BUSCARButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
 

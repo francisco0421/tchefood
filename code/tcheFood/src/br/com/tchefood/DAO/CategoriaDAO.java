@@ -3,11 +3,11 @@ package br.com.tchefood.DAO;
 import br.com.tchefood.banco.ConexaoMysql;
 import br.com.tchefood.model.CategoriaModel;
 
-import java.rmi.server.ExportException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class CategoriaDAO {
     public void salvar(CategoriaModel usuario) throws SQLException, ClassNotFoundException {
@@ -24,7 +24,7 @@ public class CategoriaDAO {
     }
     }
 
-    public static int getCategoriaExcluir(int pedidoId) {
+    public static int informacaoProduto(int produtoId) {
         try {
             ConexaoMysql conexaoMYSQL = new ConexaoMysql();
             Connection con = conexaoMYSQL.obterConexao();
@@ -33,7 +33,7 @@ public class CategoriaDAO {
             int categoria = -1;
 
             stmt = con.prepareStatement("SELECT id FROM tb_categoria_produto WHERE id = ?");
-            stmt.setInt(1, pedidoId);
+            stmt.setInt(1, produtoId);
             rs = stmt.executeQuery();
 
             if (rs.next()) {
@@ -42,8 +42,31 @@ public class CategoriaDAO {
 
             return categoria;
 
-        } catch(Exception GETcategoriaExcluir){
-            throw new RuntimeException(GETcategoriaExcluir);
+        } catch(Exception informacaoProduto){
+            throw new RuntimeException(informacaoProduto);
         }
     }
+
+    public ArrayList<Usuario> obterTodosUsuarios() throws SQLException, ClassNotFoundException {
+        ConexaoMysql conexaoMysql = new ConexaoMysql();
+        Connection con = conexaoMysql.obterConexao();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        stmt = con.prepareStatement("SELECT id, descricao FROM tb_categoria_produto");
+        rs = stmt.executeQuery();
+
+        ArrayList<Usuario> usuariosList = new ArrayList<>();
+
+        while (rs.next()) {
+            int id = rs.getInt("id");
+            String descricao = rs.getString("descricao");
+            Usuario usuario = new Usuario(id, descricao);
+            usuariosList.add(usuario);
+        }
+
+        // Retorna a lista de usuários
+        return usuariosList;
+    }
+
 }
