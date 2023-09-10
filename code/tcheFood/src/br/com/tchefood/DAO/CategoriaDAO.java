@@ -2,6 +2,7 @@ package br.com.tchefood.DAO;
 
 import br.com.tchefood.banco.ConexaoMysql;
 import br.com.tchefood.model.CategoriaModel;
+import br.com.tchefood.model.ProdutoModel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -47,7 +48,7 @@ public class CategoriaDAO {
         }
     }
 
-    public ArrayList<Produto> obterTodosProdutos() throws SQLException, ClassNotFoundException {
+    public ArrayList<ProdutoModel> obterTodosProdutos() throws SQLException, ClassNotFoundException {
         ConexaoMysql conexaoMysql = new ConexaoMysql();
         Connection con = conexaoMysql.obterConexao();
         PreparedStatement stmt = null;
@@ -56,12 +57,14 @@ public class CategoriaDAO {
         stmt = con.prepareStatement("SELECT id, descricao FROM tb_categoria_produto");
         rs = stmt.executeQuery();
 
-        ArrayList<Produto> produtosList = new ArrayList<>();
+        ArrayList<ProdutoModel> produtosList = new ArrayList<>();
 
         while (rs.next()) {
             int id = rs.getInt("id");
             String descricao = rs.getString("descricao");
-            Produto produto = new Produto(id, descricao);
+            ProdutoModel produto = new ProdutoModel();
+            produto.setId(id);
+            produto.setDescricao(descricao);
             produtosList.add(produto);
         }
 

@@ -10,7 +10,7 @@ public class FormaDePagamento {
     private JLabel labelText;
     private JLabel labelTitle;
     private JPanel jpformadepagamento;
-    private JTextField tfproduto;
+    public JTextField tfproduto;
     private JTable tabelaProdutos;
     private JTextField tfquantidade;
     private JButton jbadicionar;
