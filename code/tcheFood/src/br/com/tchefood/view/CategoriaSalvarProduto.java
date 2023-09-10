@@ -1,6 +1,7 @@
 package br.com.tchefood.view;
 
 import br.com.tchefood.DAO.CategoriaDAO;
+import br.com.tchefood.DAO.InformacaoProdutoDAO;
 import br.com.tchefood.banco.ConexaoMysql;
 import br.com.tchefood.model.CategoriaModel;
 
@@ -10,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
 
 public class CategoriaSalvarProduto {
     private JPanel panel1;
@@ -114,35 +116,29 @@ public class CategoriaSalvarProduto {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                InformacaoProdutoDAO informacaoProdutoDAO = new InformacaoProdutoDAO();
+                // 1. Obter o ID digitado pelo usuário
+                int idBuscado = Integer.parseInt(textField2.getText()); // Suponha que textField2 seja o campo de texto onde o usuário insere o ID.
+
+                try {
+                    // 2. Consultar o banco de dados com base no ID
+                    String descricao = InformacaoProdutoDAO.obterDescricaoPorID(idBuscado); // Substitua informacaoProdutoDAO pelo nome da sua classe DAO adequada.
+
+                    // 3. Preencher o campo de texto de descrição com o valor obtido
+                    textField1.setText(descricao); // Suponha que textField1 seja o campo de texto onde você deseja exibir a descrição.
+                } catch (SQLException ex) {
+                    // Trate a exceção de forma adequada, como mostrar uma mensagem de erro ao usuário
+                    JOptionPane.showMessageDialog(null, "Erro ao buscar descrição: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                } catch (ClassNotFoundException ex) {
+                    // Trate a exceção de forma adequada, como mostrar uma mensagem de erro ao usuário
+                    JOptionPane.showMessageDialog(null, "Erro de classe: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
-        SALVAREDIÇÃOButton.addActionListener(new ActionListener() {
-            // Dentro do ActionListener do botão "Salvar Edição"
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CategoriaDAO categoriaDAO = new CategoriaDAO();
-                CategoriaModel categoria = new CategoriaModel();
 
-                // Suponhamos que você tenha o ID do produto que está sendo editado
-                int idProdutoEditado = obterIdProdutoEditado();
 
-                // Defina o ID do produto que está sendo editado
-                categoria.setId(idProdutoEditado);
 
-                // Defina a nova descrição com base nos dados do campo de texto
-                categoria.setDescricao(textField1.getText());
-
-                // Atualize o produto no banco de dados
-                categoriaDAO.atualizar(categoria);
-            }
-
-            private int obterIdProdutoEditado() {
-                return 0;
-            }
-
-        });
     }
-
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("CategoriaSalvarProduto");
@@ -151,4 +147,5 @@ public class CategoriaSalvarProduto {
         frame.pack();
         frame.setVisible(true);
     }
+
 }
