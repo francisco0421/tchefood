@@ -68,6 +68,7 @@ public class CategoriaSalvarProduto {
     private JButton BUSCARButton;
     private JButton SALVAREDIÇÃOButton;
     private JLabel IDCasoVocêQueiraLabel;
+    private JTable fasdf;
 
     public CategoriaSalvarProduto() {
         SALVARButton.addActionListener(new ActionListener() {
@@ -75,15 +76,28 @@ public class CategoriaSalvarProduto {
             public void actionPerformed(ActionEvent e) {
                 CategoriaDAO categoriaDAO = new CategoriaDAO();
                 CategoriaModel categoria = new CategoriaModel();
-                categoria.setDescricao(textField1.getText());
-                try {
-                    categoriaDAO.salvar(categoria);
-                } catch (SQLException ex) {
-                    throw new RuntimeException(ex);
-                } catch (ClassNotFoundException ex) {
-                    throw new RuntimeException(ex);
+
+                // Verifique se o campo de descrição está vazio antes de salvar
+                String descricao = textField1.getText().trim(); // Remova espaços em branco desnecessários
+                if (descricao.isEmpty()) {
+                    // Exiba uma mensagem de erro se a descrição estiver vazia
+                    JOptionPane.showMessageDialog(null, "A descrição do produto é obrigatória", "Erro", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    categoria.setDescricao(descricao);
+
+                    try {
+                        categoriaDAO.salvar(categoria);
+                        // Se a operação de salvamento for bem-sucedida, exiba uma mensagem de sucesso
+                        JOptionPane.showMessageDialog(null, "Produto adicionado com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+                    } catch (SQLException ex) {
+                        // Em caso de erro SQL, exiba uma mensagem de falha
+                        JOptionPane.showMessageDialog(null, "Erro ao adicionar produto: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                    } catch (ClassNotFoundException ex) {
+                        throw new RuntimeException(ex);
+                    }
                 }
             }
+
         });
         EXCLUIRButton.addActionListener(new ActionListener() {
             @Override
@@ -137,6 +151,34 @@ public class CategoriaSalvarProduto {
         });
 
 
+        SALVAREDIÇÃOButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CategoriaDAO categoriaDAO = new CategoriaDAO();
+                CategoriaModel categoria = new CategoriaModel();
+
+                // Verifique se o campo de descrição está vazio antes de salvar a edição
+                String descricao = textField1.getText().trim(); // Remova espaços em branco desnecessários
+                int idEditar = Integer.parseInt(textField2.getText());
+
+                try {
+                    // Defina o ID da categoria que você deseja editar
+                    categoria.setId(idEditar);
+
+                    // Configure a nova descrição para a categoria
+                    categoria.setDescricao(descricao);
+
+                    categoriaDAO.atualizar(categoria); // Suponha que você tenha um método "atualizar" no seu DAO para atualizar um produto
+                    // Se a operação de atualização for bem-sucedida, exiba uma mensagem de sucesso
+                    JOptionPane.showMessageDialog(null, "Produto editado com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+                } catch (SQLException ex) {
+                    // Em caso de erro SQL, exiba uma mensagem de falha
+                    JOptionPane.showMessageDialog(null, "Erro ao editar produto: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                } catch (ClassNotFoundException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
 
     }
 

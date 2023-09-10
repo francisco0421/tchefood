@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c30c8942-c680-4bec-8638-115be4c00164" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/tchefood/DAO/InformacaoProdutoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/tchefood/model/informacaoProdutoModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/DAO/CategoriaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/DAO/CategoriaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/DAO/Produto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

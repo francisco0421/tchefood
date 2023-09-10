@@ -87,6 +87,14 @@
               <text value="SALVAR EDIÇÃO"/>
             </properties>
           </component>
+          <component id="73ef3" class="javax.swing.JTable" binding="fasdf">
+            <constraints>
+              <grid row="3" column="0" row-span="2" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
         </children>
       </grid>
       <vspacer id="7fecf">
