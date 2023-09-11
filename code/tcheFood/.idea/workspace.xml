@@ -4,38 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c30c8942-c680-4bec-8638-115be4c00164" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/tchefood/DAO/ProdutoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/tchefood/model/ProdutoModel.java" afterDir="false" />
+    <list default="true" id="ae2bd414-4f15-471e-b598-7736498436a5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/DAO/CategoriaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/DAO/CategoriaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/DAO/Produto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/DAO/ProdutoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/DAO/ProdutoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/banco/ConexaoMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/banco/ConexaoMysql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/FormaDePagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/FormaDePagamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tcheFood.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tcheFood.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2Ux3OJugCcbyxOmOtfyxojFNX37" />
+  <component name="ProjectId" id="2VGmwe3HtQ18gjLoY4gHXCwZ98Y" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,84 +32,21 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Yan/Desktop/tchefood/code/tcheFood",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editor.preferences.import",
-    "vue.rearranger.settings.migration": "true"
+    "last_opened_file_path": "C:/Users/aluno tds/Desktop/tchefood/code/tcheFood/src/br/com/tchefood/libs/mysql-connector-j-8.0.33.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="br.com.tchefood.DAO" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.FormaDePagamento">
-    <configuration name="CategoriaSalvarProduto (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.tchefood.view.CategoriaSalvarProduto" />
-      <module name="tchefood" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.tchefood.view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CategoriaSalvarProduto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.tchefood.view.CategoriaSalvarProduto" />
-      <module name="tchefood" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.tchefood.view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FormaDePagamento" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.tchefood.view.FormaDePagamento" />
-      <module name="tchefood" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.tchefood.view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.FormaDePagamento" />
-        <item itemvalue="Application.CategoriaSalvarProduto (1)" />
-        <item itemvalue="Application.CategoriaSalvarProduto" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c30c8942-c680-4bec-8638-115be4c00164" name="Changes" comment="" />
-      <created>1693867372554</created>
+      <changelist id="ae2bd414-4f15-471e-b598-7736498436a5" name="Changes" comment="" />
+      <created>1694471032009</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1693867372554</updated>
-      <workItem from="1694204293222" duration="2464000" />
-      <workItem from="1694301858664" duration="5676000" />
+      <updated>1694471032009</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>
