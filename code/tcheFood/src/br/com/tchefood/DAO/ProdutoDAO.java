@@ -1,2 +1,87 @@
-package br.com.tchefood.DAO;public class ProdutoDAO {
+package br.com.tchefood.DAO;
+
+import br.com.tchefood.banco.ConexaoMysql;
+import br.com.tchefood.model.CategoriaModel;
+import br.com.tchefood.model.ProdutoModel;
+
+import java.sql.*;
+import java.util.ArrayList;
+
+public class ProdutoDAO {
+    public void salvar(ProdutoModel produto){
+        try {
+            ConexaoMysql conexaoMysql = new ConexaoMysql();
+            Connection con = null;
+
+            con = conexaoMysql.obterConexao();
+
+            PreparedStatement stmt = null;
+            stmt = con.prepareStatement("INSERT INTO tb_produto(descricao) VALUES (?)");
+            stmt.setString(1, produto.getDescricao());
+            stmt.executeUpdate();
+        } catch (Exception e1){
+            System.err.println(e1.getMessage());
+        }
+    }
+
+    public ProdutoModel obterProdutoPorID(int produtoID) {
+        ProdutoModel produto = null;
+        try {
+            ConexaoMysql conexaoMysql = new ConexaoMysql();
+            Connection con = null;
+            con = conexaoMysql.obterConexao();
+            PreparedStatement stmt = null;
+            stmt = con.prepareStatement("SELECT id, descricao FROM tb_produto WHERE id = (?)");
+            stmt.setInt(1, produtoID);
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getResultSet();
+            rs.next();
+            produto = new ProdutoModel();
+            produto.setId(rs.getInt("id"));
+            produto.setDescricao(rs.getString("descricao"));
+        } catch (Exception e1) {
+            System.err.println(e1.getMessage());
+        }
+        return produto;
+    }
+
+    public ArrayList<ProdutoModel> listar(String filtro, int limite){
+        ArrayList<ProdutoModel> listaProduto = null;
+        try {
+            ConexaoMysql conexaoMysql = new ConexaoMysql();
+            Connection con = null;
+            con = conexaoMysql.obterConexao();
+            PreparedStatement stmt = null;
+
+
+            String sql;
+            if(filtro.isEmpty()){
+                sql = "SELECT id, descricao FROM tb_produto LIMIT ?";
+                stmt = con.prepareStatement(sql);
+                stmt.setInt(1, limite);
+            }
+            else{
+                sql = "SELECT id, descricao FROM tb_produto WHERE descricao LIKE '?' LIMIT ?";
+                stmt = con.prepareStatement(sql);
+                stmt.setInt(1, limite);
+                stmt.setString(2, filtro);
+            }
+
+
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getResultSet();
+            listaProduto = new ArrayList<ProdutoModel>();
+
+            while(rs.next()){
+                ProdutoModel produto = new ProdutoModel();
+                produto.setId(rs.getInt("id"));
+                produto.setDescricao(rs.getString("descricao"));
+            }
+
+        } catch (Exception e1) {
+            System.err.println(e1.getMessage());
+        }
+
+        return listaProduto;
+    }
 }

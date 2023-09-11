@@ -15,6 +15,9 @@ public class GerenciamentoProduto {
     private JLabel jlCategoria;
     private JLabel jlProduto;
     private JPanel jpGerenciamentoProduto;
+    private JLabel jlPreco;
+    private JTextField tfPreco;
+
     public GerenciamentoProduto() {
         comboBoxCategoria.addActionListener(new ActionListener() {
             @Override

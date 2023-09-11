@@ -5,7 +5,7 @@ public class ProdutoModel {
     private String descricao;
     private float valor;
 
-    //private CategoriaModel categoria;
+    private CategoriaModel categoria;
 
 
     public int getId() {
