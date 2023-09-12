@@ -9,16 +9,6 @@ import java.sql.SQLException;
 
 public class CategoriaDAO {
     public void salvar(CategoriaModel usuario) throws SQLException, ClassNotFoundException {
-<<<<<<< HEAD
-        ConexaoMysql conexaoMysql = new ConexaoMysql();
-        Connection conn = conexaoMysql.obterConexao();
-        PreparedStatement stmt = null;
-        stmt = conn.prepareStatement("INSERT INTO tb_categoria_produto(descricao) VALUES (?,?,?,?,?)");
-        stmt.setString(1, usuario.getDescricao());
-        stmt.executeUpdate();
-    }
-}
-=======
     try {
         ConexaoMysql conexaoMysql = new ConexaoMysql();
         Connection conn = conexaoMysql.obterConexao();
@@ -52,5 +42,3 @@ public class CategoriaDAO {
 
         }
     }
-
->>>>>>> e87abbbdb7221cf5111f547709031600ac0786a2
