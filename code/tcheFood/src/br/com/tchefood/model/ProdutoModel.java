@@ -3,7 +3,7 @@ package br.com.tchefood.model;
 public class ProdutoModel {
     private int id;
     private String descricao;
-    private float valor;
+    private float preco;
 
     private CategoriaModel categoria;
 
@@ -24,11 +24,11 @@ public class ProdutoModel {
         this.descricao = descricao;
     }
 
-    public float getValor() {
-        return valor;
+    public float getPreco() {
+        return preco;
     }
 
-    public void setValor(float valor) {
-        this.valor = valor;
+    public void setPreco(float preco) {
+        this.preco = preco;
     }
 }

@@ -45,6 +45,32 @@ public class ProdutoDAO {
         return produto;
     }
 
+        public static ArrayList<ProdutoModel> obterProdutos(int id) throws SQLException, ClassNotFoundException, SQLException {
+            ConexaoMysql conexaoMysql = new ConexaoMysql();
+            Connection con = conexaoMysql.obterConexao();
+            PreparedStatement stmt = null;
+            ResultSet rs = null;
+
+            stmt = con.prepareStatement("SELECT id, descricao, preco FROM tb_produto WHERE id = ?");
+            stmt.setInt(1, id);
+            rs = stmt.executeQuery();
+
+            ArrayList<ProdutoModel> produtosList = new ArrayList<>();
+
+            while (rs.next()) {
+                ProdutoModel model = new ProdutoModel();
+                model.setId(rs.getInt("id"));
+                model.setDescricao(rs.getString("descricao"));
+                model.setPreco(rs.getFloat("preco"));
+
+
+                produtosList.add(model);
+            }
+
+            return produtosList;
+        }
+
+
     public ArrayList<ProdutoModel> listar(String filtro, int limite){
         ArrayList<ProdutoModel> listaProduto = null;
         try {

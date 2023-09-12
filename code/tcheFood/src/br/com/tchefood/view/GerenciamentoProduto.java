@@ -29,7 +29,7 @@ public class GerenciamentoProduto {
                 comboBoxCategoria.addItem("Batata frita");
 
                 ProdutoModel produto = new ProdutoModel();
-                produto.setValor(Float.parseFloat(tfProduto.getText()));
+                produto.setPreco(Float.parseFloat(tfProduto.getText()));
 
             }
         });

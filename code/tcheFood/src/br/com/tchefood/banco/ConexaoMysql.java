@@ -9,7 +9,7 @@ public class ConexaoMysql {
     private String usuario = "root";
     private String senha = "senac";
 
-    private String nomeBancoDados = "tche_food";
+    private String nomeBancoDados = "teste";
 
     public Connection obterConexao() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
