@@ -1,18 +1,26 @@
 package br.com.tchefood.view;
 
 import br.com.tchefood.DAO.CategoriaDAO;
+<<<<<<< HEAD
+=======
 import br.com.tchefood.DAO.InformacaoProdutoDAO;
 import br.com.tchefood.banco.ConexaoMysql;
+>>>>>>> e87abbbdb7221cf5111f547709031600ac0786a2
 import br.com.tchefood.model.CategoriaModel;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+<<<<<<< HEAD
+import java.sql.SQLException;
+
+=======
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 
+>>>>>>> e87abbbdb7221cf5111f547709031600ac0786a2
 public class CategoriaSalvarProduto {
     private JPanel panel1;
     private JPanel jpanel;
@@ -64,6 +72,32 @@ public class CategoriaSalvarProduto {
     private JButton SALVARButton;
     private JLabel JLnomeProduto;
     private JButton EXCLUIRButton;
+<<<<<<< HEAD
+
+    public CategoriaSalvarProduto() {
+    SALVARButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            CategoriaDAO categoriaDAO = new CategoriaDAO();
+            CategoriaModel categoria = new CategoriaModel();
+            categoria.setDescricao(textField1.getText());
+            try {
+                categoriaDAO.salvar(categoria);
+            } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+            } catch (ClassNotFoundException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+    });
+        EXCLUIRButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+    }
+=======
     private JTextField textField2;
     private JButton BUSCARButton;
     private JButton SALVAREDIÇÃOButton;
@@ -190,4 +224,5 @@ public class CategoriaSalvarProduto {
         frame.setVisible(true);
     }
 
+>>>>>>> e87abbbdb7221cf5111f547709031600ac0786a2
 }
