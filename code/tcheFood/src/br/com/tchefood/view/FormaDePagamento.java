@@ -1,16 +1,21 @@
 package br.com.tchefood.view;
 
+import br.com.tchefood.DAO.ProdutoDAO;
+import br.com.tchefood.model.ProdutoModel;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class FormaDePagamento {
     private JComboBox jcbForma;
     private JLabel labelText;
     private JLabel labelTitle;
     private JPanel jpformadepagamento;
-    private JTextField tfproduto;
+    public JTextField tfproduto;
     private JTable tabelaProdutos;
     private JTextField tfquantidade;
     private JButton jbadicionar;
@@ -19,20 +24,41 @@ public class FormaDePagamento {
 
     public FormaDePagamento() {
         modelTable = new DefaultTableModel();
-        modelTable.addColumn("produto");
+        modelTable.addColumn("id");
+        modelTable.addColumn("descricao");
         modelTable.addColumn("quantidade");
-        tabelaProdutos.setModel(modelTable);
+        modelTable.addColumn("preco");
+        modelTable.addColumn("precoTotal");
+
 
         jbadicionar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String produto = tfproduto.getText();
-                String quantidade = tfquantidade.getText();
-                if(!produto.isEmpty() && !quantidade.isEmpty()){
-                    modelTable.addRow(new Object[]{produto, quantidade});
-                    tfproduto.setText(null);
-                    tfquantidade.setText(null);
+                int id = Integer.parseInt(tfproduto.getText());
+
+                int quantidade = Integer.parseInt(tfquantidade.getText());
+                double precoUnitario=0;
+                try {
+                    for (ProdutoModel pm:ProdutoDAO.obterProdutos(id)) {
+                        precoUnitario= pm.getPreco();
+                        double precoTotal= quantidade*precoUnitario;
+                        modelTable.addRow(new Object[]{pm.getId(), pm.getDescricao(), quantidade, pm.getPreco(), precoTotal});
+                    }
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                } catch (ClassNotFoundException ex) {
+                    throw new RuntimeException(ex);
                 }
+
+
+                tabelaProdutos.setModel(modelTable);
+            }
+        });
+
+        jcbForma.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
@@ -42,5 +68,8 @@ public class FormaDePagamento {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+
+
+
     }
 }

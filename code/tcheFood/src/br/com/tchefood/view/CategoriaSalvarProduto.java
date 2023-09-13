@@ -139,18 +139,7 @@
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    try {
-                        for(ProdutoModel a: ProdutoDAO.ListarTodos()){
-                            table1.addRow(new Object[]{a.getId(), a.get)});
-                        }
-                    } catch (SQLException ex) {
-                        throw new RuntimeException(ex);
-                    } catch (ClassNotFoundException ex) {
-                        throw new RuntimeException(ex);
-                    }
-                    JTusarios.setModel(tabelaUser);
 
-                }
                 }
             });
         }
