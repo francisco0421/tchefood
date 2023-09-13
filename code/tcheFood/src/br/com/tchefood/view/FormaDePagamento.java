@@ -26,7 +26,9 @@ public class FormaDePagamento {
         modelTable = new DefaultTableModel();
         modelTable.addColumn("id");
         modelTable.addColumn("descricao");
+        modelTable.addColumn("quantidade");
         modelTable.addColumn("preco");
+        modelTable.addColumn("precoTotal");
 
 
         jbadicionar.addActionListener(new ActionListener() {
@@ -34,11 +36,14 @@ public class FormaDePagamento {
             public void actionPerformed(ActionEvent e) {
                 int id = Integer.parseInt(tfproduto.getText());
 
-                //String quantidade = tfquantidade.getText();
-
+                int quantidade = Integer.parseInt(tfquantidade.getText());
+                double precoUnitario=0;
                 try {
-                    for (ProdutoModel pm:ProdutoDAO.obterProdutos(id))
-                        modelTable.addRow(new Object[]{pm.getId(), pm.getDescricao(), pm.getPreco()});
+                    for (ProdutoModel pm:ProdutoDAO.obterProdutos(id)) {
+                        precoUnitario= pm.getPreco();
+                        double precoTotal= quantidade*precoUnitario;
+                        modelTable.addRow(new Object[]{pm.getId(), pm.getDescricao(), quantidade, pm.getPreco(), precoTotal});
+                    }
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 } catch (ClassNotFoundException ex) {
@@ -47,6 +52,13 @@ public class FormaDePagamento {
 
 
                 tabelaProdutos.setModel(modelTable);
+            }
+        });
+
+        jcbForma.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
