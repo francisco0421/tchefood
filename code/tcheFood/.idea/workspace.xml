@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b93565c3-599a-44b3-a86c-74b7aef9d22a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/DAO/ProdutoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/DAO/ProdutoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/model/ProdutoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/model/ProdutoModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/GerenciamentoProduto.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/GerenciamentoProduto.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/GerenciamentoProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/GerenciamentoProduto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/DAO/CategoriaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/DAO/CategoriaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/DAO/ProdutoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/DAO/ProdutoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/banco/ConexaoMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/banco/ConexaoMysql.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +72,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DeletarMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.tchefood.view.DeletarMain" />
+      <module name="tchefood" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.tchefood.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FormaDePagamento" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.tchefood.view.FormaDePagamento" />
       <module name="tchefood" />
@@ -91,6 +101,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.CategoriaSalvarProduto" />
+        <item itemvalue="Application.DeletarMain" />
         <item itemvalue="Application.FormaDePagamento" />
         <item itemvalue="Application.CategoriaSalvarProduto (1)" />
       </list>
