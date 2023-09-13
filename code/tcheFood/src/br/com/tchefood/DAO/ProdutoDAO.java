@@ -71,43 +71,5 @@ public class ProdutoDAO {
         }
 
 
-    public ArrayList<ProdutoModel> listar(String filtro, int limite){
-        ArrayList<ProdutoModel> listaProduto = null;
-        try {
-            ConexaoMysql conexaoMysql = new ConexaoMysql();
-            Connection con = null;
-            con = conexaoMysql.obterConexao();
-            PreparedStatement stmt = null;
 
-
-            String sql;
-            if(filtro.isEmpty()){
-                sql = "SELECT id, descricao FROM tb_produto LIMIT ?";
-                stmt = con.prepareStatement(sql);
-                stmt.setInt(1, limite);
-            }
-            else{
-                sql = "SELECT id, descricao FROM tb_produto WHERE descricao LIKE '?' LIMIT ?";
-                stmt = con.prepareStatement(sql);
-                stmt.setInt(1, limite);
-                stmt.setString(2, filtro);
-            }
-
-
-            stmt.executeUpdate();
-            ResultSet rs = stmt.getResultSet();
-            listaProduto = new ArrayList<ProdutoModel>();
-
-            while(rs.next()){
-                ProdutoModel produto = new ProdutoModel();
-                produto.setId(rs.getInt("id"));
-                produto.setDescricao(rs.getString("descricao"));
-            }
-
-        } catch (Exception e1) {
-            System.err.println(e1.getMessage());
-        }
-
-        return listaProduto;
-    }
 }
