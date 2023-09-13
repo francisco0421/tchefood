@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="224798b8-e8e0-4aa0-93bb-53488d77f75d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
@@ -16,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/GerenciamentoProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/GerenciamentoProduto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tcheFood.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tcheFood.iml" afterDir="false" />
     </list>
+      <list default="true" id="bb9a4ae9-79b5-4802-a531-55cacd5a5d89" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +26,30 @@
   <component name="RunManager">
     <configuration name="CategoriaSalvarProduto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.tchefood.view.CategoriaSalvarProduto" />
+
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2VJdy0aYVOWfZo7fJN8ZC7HGEqm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/aluno tds/Desktop/Nova pasta/tchefood/code/tcheFood/src/br/com/tchefood/libs/mysql-connector-j-8.0.33.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="FormaDePagamento" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.tchefood.view.FormaDePagamento" />
+>>>>>>> a0e7c704b0e7dfd88e4e0a5a9bb03dc9842d620b
       <module name="tcheFood" />
       <extension name="coverage">
         <pattern>
@@ -35,13 +61,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="tcheFood" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="tcheFood" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Application.CategoriaSalvarProduto" />
+=======
+        <item itemvalue="Application.FormaDePagamento" />
+>>>>>>> a0e7c704b0e7dfd88e4e0a5a9bb03dc9842d620b
       </list>
     </recent_temporary>
   </component>
   <component name="TaskManager">
+<<<<<<< HEAD
+=======
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb9a4ae9-79b5-4802-a531-55cacd5a5d89" name="Changes" comment="" />
+      <created>1694558367777</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694558367777</updated>
+    </task>
+>>>>>>> a0e7c704b0e7dfd88e4e0a5a9bb03dc9842d620b
     <servers />
   </component>
 </project>

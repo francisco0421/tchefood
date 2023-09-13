@@ -1,13 +1,9 @@
     package br.com.tchefood.view;
 
     import br.com.tchefood.DAO.CategoriaDAO;
-    import br.com.tchefood.DAO.InformacaoProdutoDAO;
     import br.com.tchefood.DAO.ProdutoDAO;
-    import br.com.tchefood.DAO.UsuarioDAO;
     import br.com.tchefood.banco.ConexaoMysql;
     import br.com.tchefood.model.CategoriaModel;
-    import br.com.tchefood.model.ProdutoModel;
-    import br.com.tchefood.model.UsuarioModel;
 
     import javax.swing.*;
     import javax.swing.table.DefaultTableModel;
@@ -31,8 +27,6 @@
         private JPanel jpCategoriaProduto;
         private JTable table1;
         private JButton LISTARButton;
-
-        private DefaultTableModel tableModel;
 
 
         public CategoriaSalvarProduto() {
@@ -91,12 +85,12 @@
             BUSCARButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    InformacaoProdutoDAO informacaoProdutoDAO = new InformacaoProdutoDAO();
+                    ProdutoDAO.InformacaoProdutoDAO informacaoProdutoDAO = new ProdutoDAO.InformacaoProdutoDAO();
                     int idBuscado = Integer.parseInt(textField2.getText());
 
                     try {
 
-                        String descricao = InformacaoProdutoDAO.obterDescricaoPorID(idBuscado);
+                        String descricao = ProdutoDAO.InformacaoProdutoDAO.obterDescricaoPorID(idBuscado);
 
                         textField1.setText(descricao);
                     } catch (SQLException ex) {
@@ -132,9 +126,6 @@
             });
 
 
-            tableModel = new DefaultTableModel();
-            tableModel.addColumn("id");
-            tableModel.addColumn("descricao");
             LISTARButton.addActionListener(new ActionListener() {
 
                 @Override
