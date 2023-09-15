@@ -2,8 +2,11 @@
 
     import br.com.tchefood.DAO.CategoriaDAO;
     import br.com.tchefood.DAO.ProdutoDAO;
+    import br.com.tchefood.DAO.UsuarioDAO;
     import br.com.tchefood.banco.ConexaoMysql;
     import br.com.tchefood.model.CategoriaModel;
+    import br.com.tchefood.model.ProdutoModel;
+    import br.com.tchefood.model.UsuarioModel;
 
     import javax.swing.*;
     import javax.swing.table.DefaultTableModel;
@@ -12,6 +15,7 @@
     import java.sql.Connection;
     import java.sql.PreparedStatement;
     import java.sql.SQLException;
+    import java.util.ArrayList;
 
 
     public class CategoriaSalvarProduto {
@@ -27,7 +31,7 @@
         private JPanel jpCategoriaProduto;
         private JTable table1;
         private JButton LISTARButton;
-
+        private DefaultTableModel tableModel;
 
         public CategoriaSalvarProduto() {
         SALVARButton.addActionListener(new ActionListener() {
@@ -125,15 +129,26 @@
                 }
             });
 
+            tableModel = new DefaultTableModel();
+            tableModel.addColumn("descricao");
+            tableModel.addColumn("id");
+            table1.setModel(tableModel);
 
             LISTARButton.addActionListener(new ActionListener() {
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    CategoriaDAO categoriaDAO = new CategoriaDAO();
+                    ArrayList<CategoriaModel> listaCategoria = categoriaDAO.listarCategoria();
 
+                    for(CategoriaModel categoria : listaCategoria){
+                        tableModel.addRow(new Object[]{categoria.getDescricao(), categoria.getId()});
+                    }
                 }
             });
         }
+
+
 
         public static void main(String[] args) {
 
