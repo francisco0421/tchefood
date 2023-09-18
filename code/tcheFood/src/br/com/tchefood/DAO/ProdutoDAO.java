@@ -15,8 +15,11 @@ public class ProdutoDAO {
             con = conexaoMysql.obterConexao();
 
             PreparedStatement stmt = null;
-            stmt = con.prepareStatement("INSERT INTO tb_produto(descricao) VALUES (?)");
-            stmt.setString(1, produto.getDescricao());
+            stmt = con.prepareStatement("INSERT INTO tb_produto(id, categoria_produto, descricao, preco) VALUES (?, ?, ?, ?)");
+            stmt.setInt(1, produto.getId());
+            stmt.setString(2, produto.getCategoriaProduto());
+            stmt.setString(3, produto.getDescricao());
+            stmt.setFloat(4, produto.getPreco());
             stmt.executeUpdate();
         } catch (Exception e1){
             System.err.println(e1.getMessage());
