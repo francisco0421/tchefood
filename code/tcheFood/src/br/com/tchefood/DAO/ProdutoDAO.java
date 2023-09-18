@@ -19,7 +19,7 @@ public class ProdutoDAO {
             stmt.setInt(1, produto.getId());
             stmt.setString(2, produto.getCategoriaProduto());
             stmt.setString(3, produto.getDescricao());
-            stmt.setFloat(4, produto.getPreco());
+            stmt.setFloat(4, produto.getValor());
             stmt.executeUpdate();
         } catch (Exception e1){
             System.err.println(e1.getMessage());
