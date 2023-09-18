@@ -139,7 +139,7 @@
                     ArrayList<CategoriaModel> listaCategoria = categoriaDAO.listarCategoria();/*chamando meu método listar categoria que ta no meu CATEOGIRADAO -- obtendo uma lista do meus obejtos do tipo Categoria DAO*/
 
                     for(CategoriaModel categoria : listaCategoria){
-                        tableModel.addRow(new Object[]{categoria.getDescricao(), categoria.getId()});
+                        tableModel.addRow(new Object[]{categoria.getDescricao(), categoria.getId()});/*estou adicionando uma nova linha da minha tabela contentodo minhas informações*/
                     }
                 }
             });
