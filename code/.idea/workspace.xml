@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f950f73a-3e62-419b-b528-416e1cfd21a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/code/br/com/tchefood/DAO/CategoriaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/br/com/tchefood/DAO/CategoriaDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/code/br/com/tchefood/banco/ConexaoMysql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/br/com/tchefood/banco/ConexaoMysql.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/code/br/com/tchefood/view/CategoriaSalvarProduto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tcheFood/src/br/com/tchefood/banco/ConexaoMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/tcheFood/src/br/com/tchefood/banco/ConexaoMysql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tcheFood/src/br/com/tchefood/DAO/ProdutoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tcheFood/src/br/com/tchefood/DAO/ProdutoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tcheFood/src/br/com/tchefood/view/CategoriaSalvarProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/tcheFood/src/br/com/tchefood/view/CategoriaSalvarProduto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

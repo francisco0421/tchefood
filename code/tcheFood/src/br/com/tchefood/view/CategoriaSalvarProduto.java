@@ -42,17 +42,17 @@
             SALVARButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CategoriaDAO categoriaDAO = new CategoriaDAO();
+                CategoriaDAO categoriaDAO = new CategoriaDAO();/*criando minha instância da classe CategoriaDAO*/
                 CategoriaModel categoria = new CategoriaModel();
 
-                String descricao = textField1.getText().trim();
-                if (descricao.isEmpty()) {
+                String descricao = textField1.getText().trim();/*estou usando o trim aqui para garantir que não haja espaços extras que possam afetar a validade dos dados*/
+                if (descricao.isEmpty()) /*estou verificando se minha string tem algum caracter ou não*/{
                     JOptionPane.showMessageDialog(null, "A descrição do produto é obrigatória", "Erro", JOptionPane.ERROR_MESSAGE);
                 } else {
-                    categoria.setDescricao(descricao);
+                    categoria.setDescricao(descricao);/*aqui eu estou chamando o método setDescricao do objeto categoria e passando a descrição obtida do campo de texto.*/
 
                     try {
-                        categoriaDAO.salvar(categoria);
+                        categoriaDAO.salvar(categoria);/*chama o método salvar na instancia de catogoriaDAO*/
                         JOptionPane.showMessageDialog(null, "Produto adicionado com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
                     } catch (SQLException ex) {
                         JOptionPane.showMessageDialog(null, "Erro ao adicionar produto: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
@@ -67,19 +67,18 @@
             EXCLUIRButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int idUsuario;
+                    int idProduto;
                     try {
-                        idUsuario = Integer.parseInt(textField2.getText());
+                        idProduto = Integer.parseInt(textField2.getText());
                     } catch (NumberFormatException ex) {
-                        JOptionPane.showMessageDialog(null, "ID de usuário inválido.");
+                        JOptionPane.showMessageDialog(null, "ID de produto inválido.");
                         return;
                     }
 
                     try (Connection conn = new ConexaoMysql().obterConexao();
                          PreparedStatement stmt = conn.prepareStatement("DELETE FROM tb_categoria_produto WHERE id = ?")) {
-
-                        stmt.setInt(1, idUsuario);
-                        int rowsAffected = stmt.executeUpdate();
+                        stmt.setInt(1, idProduto);
+                        int rowsAffected = stmt.executeUpdate();/*Executa a instrução SQL e obtém o número de linhas afetadas pela operação de exclusão*/
 
                         if (rowsAffected > 0) {
                             JOptionPane.showMessageDialog(null, "Categoria excluída com sucesso.");
@@ -96,17 +95,12 @@
                 public void actionPerformed(ActionEvent e) {
                     ProdutoDAO.InformacaoProdutoDAO informacaoProdutoDAO = new ProdutoDAO.InformacaoProdutoDAO();
                     int idBuscado = Integer.parseInt(textField2.getText());
-
                     try {
-
-                        String descricao = ProdutoDAO.InformacaoProdutoDAO.obterDescricaoPorID(idBuscado);
-
-                        textField1.setText(descricao);
-                    } catch (SQLException ex) {
-
+                        String descricao = ProdutoDAO.InformacaoProdutoDAO.obterDescricaoPorID(idBuscado);/*ele basicamente vai no meu ProdutoDAO aonde eu tenho meeu códgio para pegar a descrição do meu produto*/
+                        textField1.setText(descricao);/*quando eu consigo pegar a descrição ela fica guaradada nessa variavel descricao*/
+                    } catch (SQLException ex) {/*possíveis exceções que vão ser tradadas */
                         JOptionPane.showMessageDialog(null, "Erro ao buscar descrição: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
                     } catch (ClassNotFoundException ex) {
-
                         JOptionPane.showMessageDialog(null, "Erro de classe: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
                     }
                 }
@@ -123,7 +117,6 @@
                     try {
                         categoria.setId(idEditar);
                         categoria.setDescricao(descricao);
-
                         categoriaDAO.atualizar(categoria);
                         JOptionPane.showMessageDialog(null, "Produto editado com sucesso", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
                     } catch (SQLException ex) {
