@@ -1,36 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="224798b8-e8e0-4aa0-93bb-53488d77f75d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/DAO/ProdutoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/DAO/ProdutoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/banco/ConexaoMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/banco/ConexaoMysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/model/ProdutoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/model/ProdutoModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/CategoriaSalvarProduto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/FormaDePagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/FormaDePagamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/tchefood/view/GerenciamentoProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/tchefood/view/GerenciamentoProduto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tcheFood.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tcheFood.iml" afterDir="false" />
-    </list>
-      <list default="true" id="bb9a4ae9-79b5-4802-a531-55cacd5a5d89" name="Changes" comment="" />
+    <list default="true" id="69b4ce72-ddf1-4e0d-9e3e-eb1d6419f05b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="RunManager">
-    <configuration name="CategoriaSalvarProduto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.tchefood.view.CategoriaSalvarProduto" />
-
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
-  <component name="ProjectId" id="2VJdy0aYVOWfZo7fJN8ZC7HGEqm" />
+  <component name="ProjectId" id="2VaX54SamqkJVxjQNMe98xnVQNz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,63 +15,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/aluno tds/Desktop/Nova pasta/tchefood/code/tcheFood/src/br/com/tchefood/libs/mysql-connector-j-8.0.33.jar",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="FormaDePagamento" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.tchefood.view.FormaDePagamento" />
->>>>>>> a0e7c704b0e7dfd88e4e0a5a9bb03dc9842d620b
-      <module name="tcheFood" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.tchefood.view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="tcheFood" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="tcheFood" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-<<<<<<< HEAD
-        <item itemvalue="Application.CategoriaSalvarProduto" />
-=======
-        <item itemvalue="Application.FormaDePagamento" />
->>>>>>> a0e7c704b0e7dfd88e4e0a5a9bb03dc9842d620b
-      </list>
-    </recent_temporary>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-<<<<<<< HEAD
-=======
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bb9a4ae9-79b5-4802-a531-55cacd5a5d89" name="Changes" comment="" />
-      <created>1694558367777</created>
+      <changelist id="69b4ce72-ddf1-4e0d-9e3e-eb1d6419f05b" name="Changes" comment="" />
+      <created>1695074978342</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1694558367777</updated>
+      <updated>1695074978342</updated>
     </task>
->>>>>>> a0e7c704b0e7dfd88e4e0a5a9bb03dc9842d620b
     <servers />
   </component>
 </project>
