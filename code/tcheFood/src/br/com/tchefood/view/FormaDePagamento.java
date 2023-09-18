@@ -29,7 +29,9 @@ public class FormaDePagamento {
         modelTable.addColumn("quantidade");
         modelTable.addColumn("preco");
         modelTable.addColumn("precoTotal");
-
+        jcbForma.addItem("Credito");
+        jcbForma.addItem("Debito");
+        jcbForma.addItem("Pix");
 
         jbadicionar.addActionListener(new ActionListener() {
             @Override
