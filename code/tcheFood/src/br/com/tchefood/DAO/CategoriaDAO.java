@@ -46,6 +46,7 @@ public class CategoriaDAO {
     }
 
     public ArrayList<CategoriaModel> listarCategoria() {
+        /*indo pegar/ fazer minha listaaa -> henrique*/
         try {
             ConexaoMysql conexaoMysql = new ConexaoMysql();
             Connection conexao = conexaoMysql.obterConexao();

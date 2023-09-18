@@ -133,7 +133,6 @@
             table1.setModel(tableModel);
 
             LISTARButton.addActionListener(new ActionListener() {
-
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     CategoriaDAO categoriaDAO = new CategoriaDAO();
