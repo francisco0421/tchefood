@@ -51,8 +51,8 @@ public class CategoriaDAO {
             ConexaoMysql conexaoMysql = new ConexaoMysql();
             Connection conexao = conexaoMysql.obterConexao();
 
-            String sql = "SELECT descricao, id FROM tb_categoria_produto";
-            PreparedStatement statement = conexao.prepareStatement(sql);
+            String sqlParaPegarMinhaDescricao = "SELECT descricao, id FROM tb_categoria_produto";
+            PreparedStatement statement = conexao.prepareStatement(sqlParaPegarMinhaDescricao);
             ResultSet resultSet = statement.executeQuery();
             ArrayList<CategoriaModel> listaCategoria = new ArrayList<CategoriaModel>();
 
