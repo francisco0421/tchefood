@@ -3,6 +3,7 @@ package br.com.tchefood.view;
 import br.com.tchefood.model.ProdutoModel;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -29,7 +30,8 @@ public class GerenciamentoProduto {
                 comboBoxCategoria.addItem("Batata frita");
 
                 ProdutoModel produto = new ProdutoModel();
-                produto.setPreco(Float.parseFloat(tfProduto.getText()));
+               //produto.setPreco(Float.parseFloat(tfProduto.getText()));
+                // erro
 
             }
         });
