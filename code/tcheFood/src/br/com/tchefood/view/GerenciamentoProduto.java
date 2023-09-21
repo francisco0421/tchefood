@@ -30,8 +30,13 @@ public class GerenciamentoProduto {
                 comboBoxCategoria.addItem("Batata frita");
 
                 ProdutoModel produto = new ProdutoModel();
-               //produto.setPreco(Float.parseFloat(tfProduto.getText()));
-                // erro
+                produto.setValor(Float.parseFloat(tfProduto.getText()));
+
+            }
+        });
+        salvarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
             }
         });

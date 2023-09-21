@@ -64,7 +64,7 @@ public class ProdutoDAO {
                 ProdutoModel model = new ProdutoModel();
                 model.setId(rs.getInt("id"));
                 model.setDescricao(rs.getString("descricao"));
-                model.setPreco(rs.getFloat("preco"));
+                model.setValor(rs.getFloat("preco"));
 
 
                 produtosList.add(model);
