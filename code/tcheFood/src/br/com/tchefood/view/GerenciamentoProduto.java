@@ -37,7 +37,7 @@ public class GerenciamentoProduto {
         salvarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JButton salvarButton = new JButton();
             }
         });
     }
