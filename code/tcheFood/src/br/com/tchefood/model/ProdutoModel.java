@@ -3,25 +3,24 @@ package br.com.tchefood.model;
 public class ProdutoModel {
     private int id;
     private String descricao;
-    private float valor;
-    private String CategoriaProduto;
+    private double valor;
+    private String categoriaProduto;
 
-    private CategoriaModel categoria;
+    private String nome;
+
+    private double preco;
+
+
+    public String getNome() { return nome; }
+
+    public void setNome(String nome) { this.nome = nome; }
 
     public String getCategoriaProduto() {
-        return CategoriaProduto;
+        return categoriaProduto;
     }
 
     public void setCategoriaProduto(String categoriaProduto) {
-        CategoriaProduto = categoriaProduto;
-    }
-
-    public CategoriaModel getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(CategoriaModel categoria) {
-        this.categoria = categoria;
+        this.categoriaProduto = categoriaProduto;
     }
 
     public int getId() {
@@ -40,11 +39,15 @@ public class ProdutoModel {
         this.descricao = descricao;
     }
 
-    public float getValor() {
+    public double getValor() {
         return valor;
     }
 
-    public void setValor(float valor) {
+    public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    public double getPreco() {
+        return preco;
     }
 }

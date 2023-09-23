@@ -1,5 +1,7 @@
 package br.com.tchefood.view;
 
+import br.com.tchefood.DAO.ProdutoDAO;
+import br.com.tchefood.model.CategoriaModel;
 import br.com.tchefood.model.ProdutoModel;
 
 import javax.swing.*;
@@ -20,24 +22,25 @@ public class GerenciamentoProduto {
     private JTextField tfPreco;
 
     public GerenciamentoProduto() {
-        comboBoxCategoria.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JComboBox <String> comboBoxCategoria = new JComboBox<>();
 
-                comboBoxCategoria.addItem("Pizza");
-                comboBoxCategoria.addItem("Xis");
-                comboBoxCategoria.addItem("Batata frita");
+        comboBoxCategoria.addItem("Pizza");
+        comboBoxCategoria.addItem("Xis");
+        comboBoxCategoria.addItem("Batata frita");
 
-                ProdutoModel produto = new ProdutoModel();
-                produto.setValor(Float.parseFloat(tfProduto.getText()));
 
-            }
-        });
         salvarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JButton salvarButton = new JButton();
+
+                ProdutoModel produto = new ProdutoModel();
+
+                produto.setDescricao(tfDescricao.getText());
+                produto.setNome(tfProduto.getText());
+                produto.setCategoriaProduto(String.valueOf(comboBoxCategoria.getSelectedItem()));
+                produto.setValor(Double.parseDouble(tfPreco.getText()));
+
+                ProdutoDAO produtoDAO = new ProdutoDAO();
+                produtoDAO.salvar(produto);
             }
         });
     }

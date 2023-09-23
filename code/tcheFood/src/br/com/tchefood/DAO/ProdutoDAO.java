@@ -15,11 +15,12 @@ public class ProdutoDAO {
             con = conexaoMysql.obterConexao();
 
             PreparedStatement stmt = null;
-            stmt = con.prepareStatement("INSERT INTO tb_produto(id, categoria_produto, descricao, preco) VALUES (?, ?, ?, ?)");
+            stmt = con.prepareStatement("INSERT INTO tb_produto(id, categoria_produto, nome, descricao, preco) VALUES (?, ?, ?, ?, ?)");
             stmt.setInt(1, produto.getId());
             stmt.setString(2, produto.getCategoriaProduto());
-            stmt.setString(3, produto.getDescricao());
-            stmt.setFloat(4, produto.getValor());
+            stmt.setString(3, produto.getNome());
+            stmt.setString(4, produto.getDescricao());
+            stmt.setDouble(5, produto.getValor());
             stmt.executeUpdate();
         } catch (Exception e1){
             System.err.println(e1.getMessage());
@@ -48,30 +49,30 @@ public class ProdutoDAO {
     }
 
 
-        public static ArrayList<ProdutoModel> obterProdutos(int id) throws SQLException, ClassNotFoundException, SQLException {
-            ConexaoMysql conexaoMysql = new ConexaoMysql();
-            Connection con = conexaoMysql.obterConexao();
-            PreparedStatement stmt = null;
-            ResultSet rs = null;
+    public static ArrayList<ProdutoModel> obterProdutos(int id) throws SQLException, ClassNotFoundException, SQLException {
+        ConexaoMysql conexaoMysql = new ConexaoMysql();
+        Connection con = conexaoMysql.obterConexao();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
 
-            stmt = con.prepareStatement("SELECT id, descricao, preco FROM tb_produto WHERE id = ?");
-            stmt.setInt(1, id);
-            rs = stmt.executeQuery();
+        stmt = con.prepareStatement("SELECT id, descricao, preco FROM tb_produto WHERE id = ?");
+        stmt.setInt(1, id);
+        rs = stmt.executeQuery();
 
-            ArrayList<ProdutoModel> produtosList = new ArrayList<>();
+        ArrayList<ProdutoModel> produtosList = new ArrayList<>();
 
-            while (rs.next()) {
-                ProdutoModel model = new ProdutoModel();
-                model.setId(rs.getInt("id"));
-                model.setDescricao(rs.getString("descricao"));
-                model.setValor(rs.getFloat("preco"));
+        while (rs.next()) {
+            ProdutoModel model = new ProdutoModel();
+            model.setId(rs.getInt("id"));
+            model.setDescricao(rs.getString("descricao"));
+            model.setValor(rs.getDouble("preco"));
 
 
-                produtosList.add(model);
-            }
-
-            return produtosList;
+            produtosList.add(model);
         }
+
+        return produtosList;
+    }
 
 
     public static class InformacaoProdutoDAO {
